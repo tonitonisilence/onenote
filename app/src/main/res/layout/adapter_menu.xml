@@ -27,7 +27,7 @@
             android:layout_width="80.0dip"
             android:layout_height="80.0dip"
             android:layout_gravity="center"
-            android:background="@mipmap/bg_left_photo"
+            android:background="@drawable/bg_left_photo"
             android:orientation="horizontal"></LinearLayout>
 
     </FrameLayout>
@@ -47,7 +47,7 @@
             android:layout_height="40.0dip"
             android:layout_marginLeft="10.0dip"
             android:scaleType="centerInside"
-            android:src="@mipmap/ic_leftview_home"
+            android:src="@drawable/ic_leftview_home"
             android:gravity="center_vertical" />
 
         <TextView

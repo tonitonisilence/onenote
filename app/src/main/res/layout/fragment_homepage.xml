@@ -7,12 +7,12 @@
     android:clipToPadding="true"
     android:fitsSystemWindows="true"
     android:orientation="vertical" >
-    <com.lhh.ptrrv.library.PullToRefreshRecyclerView
-                android:id="@+id/mPullToRefreshRecyclerView"
+    <android.support.v7.widget.RecyclerView
+                android:id="@+id/mRecyclerView"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:gravity="center"
                 android:background="@color/colorBgLeftView">
-         </com.lhh.ptrrv.library.PullToRefreshRecyclerView>
+         </android.support.v7.widget.RecyclerView>
 
 </LinearLayout>

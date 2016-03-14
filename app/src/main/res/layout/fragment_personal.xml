@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_all"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/color_bgall"
+    android:clipToPadding="true"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_bgall"
+        android:orientation="horizontal">
+
+        <FrameLayout
+            android:id="@+id/mFrameLayout"
+            android:layout_width="80.0dip"
+            android:layout_height="80.0dip"
+            android:layout_margin="10.0dip">
+
+            <onenote.guagnzhou.com.onenote.views.CircleImageView xmlns:viewattr="http://schemas.android.com/apk/value/org.paychina.mobile.declare-styleable"
+                android:id="@+id/iv_photo"
+                android:layout_width="78.0dip"
+                android:layout_height="78.0dip"
+                android:layout_gravity="center"
+                viewattr:border_color="@color/colorBgLeftDivder"
+                viewattr:border_width="0.5dp" />
+
+            <LinearLayout
+                android:id="@+id/ll_photo"
+                android:layout_width="80.0dip"
+                android:layout_height="80.0dip"
+                android:layout_gravity="center"
+                android:background="@drawable/bg_left_photo"
+                android:orientation="horizontal"></LinearLayout>
+
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_marginLeft="10.0dip"
+            android:id="@+id/ll_text"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:id="@+id/text_name"
+                style="@style/TextAccount"
+                android:layout_width="match_parent"
+                android:layout_height="40.0dip"
+                android:layout_marginLeft="10.0dip"
+                android:layout_weight="0.5"
+                android:gravity="center_vertical"
+                android:text="Steven.Shi" />
+
+            <TextView
+                android:id="@+id/text_note_number"
+                style="@style/TextAccount"
+                android:layout_width="match_parent"
+                android:layout_height="40.0dip"
+                android:layout_marginLeft="10.0dip"
+                android:layout_weight="0.5"
+                android:gravity="center_vertical"
+                android:text="笔记数量:100篇" />
+
+            <TextView
+                android:id="@+id/text_good_number"
+                style="@style/TextAccount"
+                android:layout_width="match_parent"
+                android:layout_height="40.0dip"
+                android:layout_marginLeft="10.0dip"
+                android:layout_weight="0.5"
+                android:gravity="center_vertical"
+                android:text="点赞次数:10000次" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

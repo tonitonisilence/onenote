@@ -62,6 +62,7 @@ public class HomePageAdapter extends RecyclerView.Adapter<HomePageAdapter.ViewHo
     public void onBindViewHolder(ViewHolder  viewHolder, int position) {
         NoteInfoBean noteInfoBean = noteInfoBeans.get(position);
         viewHolder.textTitle.setText(noteInfoBean.getTitle());
+        viewHolder.ivPhoto.setImageDrawable(mContext.getResources().getDrawable(R.drawable.iv_pic_home));
     }
 
 

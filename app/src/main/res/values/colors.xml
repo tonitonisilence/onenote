@@ -8,5 +8,6 @@
     <color name="colorBgLeftDivder">#EEEEEE</color>
     <color name="color_bgall">#fff0eff4</color>
     <color name="color_white">#ffffffff</color>
+    <color name="color_gray">#ff908F92</color>
 
 </resources>

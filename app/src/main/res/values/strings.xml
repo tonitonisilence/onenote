@@ -12,5 +12,8 @@
     <string name="menu_title_5">设置</string>
     <string name="login_account">账号:</string>
     <string name="login_pwd">密码:</string>
+    <string name="login_login">登录</string>
+    <string name="login_register">注册</string>
+    <string name="homeadapter_title">三亚，梦想的地方</string>
 
 </resources>

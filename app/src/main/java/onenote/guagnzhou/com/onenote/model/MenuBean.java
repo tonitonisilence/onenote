@@ -4,7 +4,7 @@ import java.io.Serializable;
 
 public class MenuBean implements Serializable {
     private String title;//标题
-    private String id;//id
+    private int id;//id
     private boolean isCheck;//是否选中
 
     public String getTitle() {
@@ -15,11 +15,11 @@ public class MenuBean implements Serializable {
         this.title = title;
     }
 
-    public String getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(int id) {
         this.id = id;
     }
 

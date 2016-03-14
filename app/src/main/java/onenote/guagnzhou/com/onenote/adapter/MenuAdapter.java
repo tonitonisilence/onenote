@@ -19,6 +19,7 @@ import java.util.List;
 import butterknife.Bind;
 import butterknife.ButterKnife;
 import onenote.guagnzhou.com.onenote.R;
+import onenote.guagnzhou.com.onenote.config.ConstantsConfig;
 import onenote.guagnzhou.com.onenote.model.MenuBean;
 import onenote.guagnzhou.com.onenote.views.CircleImageView;
 
@@ -64,23 +65,23 @@ public class MenuAdapter extends ArrayAdapter<MenuBean> {
         MenuBean item = menuBeans.get(position);
 
         holder.textTitle.setText(item.getTitle());
-        if (item.getId().equals("1")) {
+        if (item.getId()==ConstantsConfig.FRAGMENT_PERSONAL) {
             holder.llText.setVisibility(View.GONE);
             holder.mFrameLayout.setVisibility(View.VISIBLE);
-            holder.ivPhoto.setImageDrawable(mContext.getDrawable(R.mipmap.iv_default_photo));
+            holder.ivPhoto.setImageDrawable(mContext.getDrawable(R.drawable.iv_default_photo));
         } else {
             holder.llText.setVisibility(View.VISIBLE);
             holder.mFrameLayout.setVisibility(View.GONE);
         }
 
-        if (item.getId().equals("2"))
-            holder.ivIcon.setImageDrawable(mContext.getDrawable(R.mipmap.ic_leftview_home));
-        else if (item.getId().equals("3"))
-            holder.ivIcon.setImageDrawable(mContext.getDrawable(R.mipmap.ic_leftview_circle));
-        else if (item.getId().equals("4"))
-            holder.ivIcon.setImageDrawable(mContext.getDrawable(R.mipmap.ic_leftview_friends));
-        else if (item.getId().equals("5"))
-            holder.ivIcon.setImageDrawable(mContext.getDrawable(R.mipmap.ic_leftview_settings));
+        if (item.getId()== ConstantsConfig.FRAGMENT_HOMEPAGE)
+            holder.ivIcon.setImageDrawable(mContext.getDrawable(R.drawable.ic_leftview_home));
+        else if (item.getId()== ConstantsConfig.FRAGMENT_CIRCLE)
+            holder.ivIcon.setImageDrawable(mContext.getDrawable(R.drawable.ic_leftview_circle));
+        else if (item.getId()== ConstantsConfig.FRAGMENT_FRIEND)
+            holder.ivIcon.setImageDrawable(mContext.getDrawable(R.drawable.ic_leftview_friends));
+        else if (item.getId()== ConstantsConfig.FRAGMENT_SETTING)
+            holder.ivIcon.setImageDrawable(mContext.getDrawable(R.drawable.ic_leftview_settings));
 
 
         return convertView;

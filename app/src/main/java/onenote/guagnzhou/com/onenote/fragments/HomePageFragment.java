@@ -33,12 +33,11 @@ import onenote.guagnzhou.com.onenote.views.SpacesItemDecoration;
 public class HomePageFragment extends Fragment {
     @Bind(R.id.ll_all)
     LinearLayout llAll;
-    @Bind(R.id.mPullToRefreshRecyclerView)
-    PullToRefreshRecyclerView mPullToRefreshRecyclerView;
 
     private Activity activity;
     HomePageAdapter homePageAdapter;
-    private RecyclerView mRecyclerView;
+    @Bind(R.id.mRecyclerView)
+    RecyclerView mRecyclerView;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -60,7 +59,6 @@ public class HomePageFragment extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_homepage, container, false);
         ButterKnife.bind(this, view);
-        mRecyclerView = mPullToRefreshRecyclerView.getRecyclerView();
         //设置动画和类型
         mRecyclerView.setItemAnimator(new DefaultItemAnimator());
         mRecyclerView.setLayoutManager(new StaggeredGridLayoutManager(4, StaggeredGridLayoutManager.VERTICAL));
@@ -68,12 +66,6 @@ public class HomePageFragment extends Fragment {
         SpacesItemDecoration decoration=new SpacesItemDecoration(16);
         mRecyclerView.addItemDecoration(decoration);
 
-        mPullToRefreshRecyclerView.setSwipeEnable(true);
-        mPullToRefreshRecyclerView.addHeaderView(View.inflate(activity, R.layout.header_homepage, null));
-// set loadmore String
-        mPullToRefreshRecyclerView.setLoadmoreString("loading");
-// set loadmore enable, onFinishLoading(can load more? , select before item)
-        mPullToRefreshRecyclerView.onFinishLoading(true, false);
 
         homePageAdapter = new HomePageAdapter(activity, ConstantsConfig.getNoteInfo(activity));
         mRecyclerView.setAdapter(homePageAdapter);
@@ -96,35 +88,9 @@ public class HomePageFragment extends Fragment {
     public void initlisener() {
 
 
-
-        mPullToRefreshRecyclerView.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
-            @Override
-            public void onRefresh() {
-                mHandler.sendEmptyMessageDelayed(1, 2000);
-            }
-        });
-
-        mPullToRefreshRecyclerView.setPagingableListener(new PullToRefreshRecyclerView.PagingableListener() {
-            @Override
-            public void onLoadMoreItems() {
-                mHandler.sendEmptyMessageDelayed(2, 2000);
-            }
-        });
-
     }
 
 
-    Handler mHandler = new Handler(){
-        @Override
-        public void handleMessage(Message msg) {
-            super.handleMessage(msg);
-            if (msg.what == 1) {
-                homePageAdapter.notifyDataSetChanged();
-                mPullToRefreshRecyclerView.setOnRefreshComplete();
-                mPullToRefreshRecyclerView.onFinishLoading(true, false);
-            }
-        }
-    };
 
 }
 

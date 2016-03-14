@@ -94,19 +94,10 @@
 
         </LinearLayout>
     </LinearLayout>
-    <Button
-        android:id="@+id/btn_login"
-        android:layout_margin="10.0dip"
-        android:text="@string/login_login"
-        style="@style/TextLeftViewTitle"
-        android:background="@color/colorBgLeftView"
-        android:layout_width="match_parent"
-        android:layout_height="40.0dip" />
 
     <Button
         android:id="@+id/btn_register"
-        android:layout_marginLeft="10.0dip"
-        android:layout_marginRight="10.0dip"
+        android:layout_margin="10.0dip"
         android:text="@string/login_register"
         style="@style/TextLeftViewTitle"
         android:background="@color/color_gray"

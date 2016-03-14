@@ -21,15 +21,22 @@ import onenote.guagnzhou.com.onenote.model.NoteInfoBean;
 
 public class ConstantsConfig {
     public static Context toClickContext;
+    public static int FRAGMENT_PERSONAL = 1;
+    public static int FRAGMENT_HOMEPAGE = 2;
+    public static int FRAGMENT_CIRCLE = 3;
+    public static int FRAGMENT_FRIEND = 4;
+    public static int FRAGMENT_SETTING = 5;
 
+    public static int FRAGMENT_LOGIN = 11;
+    public static int FRAGMENT_REGISTER = 111;
 
     public static ArrayList<MenuBean> getMenu(Context mContext,
-                                              String whichCheck) {
+                                              int whichCheck) {
         ArrayList<MenuBean> menuBeans = new ArrayList<MenuBean>();
         MenuBean menuBean = new MenuBean();
         //個人中心
-        menuBean.setId("1");
-        if (whichCheck.equals("1"))
+        menuBean.setId(FRAGMENT_PERSONAL);
+        if (whichCheck==FRAGMENT_PERSONAL)
             menuBean.setCheck(true);
         else
             menuBean.setCheck(false);
@@ -39,8 +46,8 @@ public class ConstantsConfig {
 
         //首頁
         menuBean = new MenuBean();
-        menuBean.setId("2");
-        if (whichCheck.equals("2"))
+        menuBean.setId(FRAGMENT_HOMEPAGE);
+        if (whichCheck==FRAGMENT_HOMEPAGE)
             menuBean.setCheck(true);
         else
             menuBean.setCheck(false);
@@ -50,8 +57,8 @@ public class ConstantsConfig {
 
         //圈子
         menuBean = new MenuBean();
-        menuBean.setId("3");
-        if (whichCheck.equals("3"))
+        menuBean.setId(FRAGMENT_CIRCLE);
+        if (whichCheck==FRAGMENT_CIRCLE)
             menuBean.setCheck(true);
         else
             menuBean.setCheck(false);
@@ -61,8 +68,8 @@ public class ConstantsConfig {
 
         //好友
         menuBean = new MenuBean();
-        menuBean.setId("4");
-        if (whichCheck.equals("4"))
+        menuBean.setId(FRAGMENT_FRIEND);
+        if (whichCheck==FRAGMENT_FRIEND)
             menuBean.setCheck(true);
         else
             menuBean.setCheck(false);
@@ -72,8 +79,8 @@ public class ConstantsConfig {
 
         //设置
         menuBean = new MenuBean();
-        menuBean.setId("5");
-        if (whichCheck.equals("5"))
+        menuBean.setId(FRAGMENT_SETTING);
+        if (whichCheck==FRAGMENT_SETTING)
             menuBean.setCheck(true);
         else
             menuBean.setCheck(false);
@@ -92,7 +99,7 @@ public class ConstantsConfig {
             noteInfoBean.setId(i+"");
             noteInfoBean.setType(i);
             noteInfoBean.setTitle(mContext.getResources().getString(
-                    R.string.menu_title_1));
+                    R.string.homeadapter_title));
             noteInfoBeans.add(noteInfoBean);
         }
 
