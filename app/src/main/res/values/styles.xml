@@ -1,0 +1,22 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="FullBleedTheme" parent="android:Theme.Holo.Light.NoActionBar.TranslucentDecor">
+        <!-- API 19 theme customizations can go here. -->
+    </style>
+
+    <style name="TextTitle" parent="@android:style/TextAppearance">
+        <item name="android:textSize">16.0dip</item>
+        <item name="android:textColor">@color/colorBgLeftDivder</item>
+    </style>
+
+    <style name="TextLeftViewTitle" parent="@android:style/TextAppearance">
+    <item name="android:textSize">14.0dip</item>
+    <item name="android:textColor">@color/colorBgLeftDivder</item>
+    </style>
+
+    <style name="TextAccount" parent="@android:style/TextAppearance">
+        <item name="android:textSize">14.0dip</item>
+        <item name="android:textColor">@color/colorBgLeftView</item>
+    </style>
+</resources>
